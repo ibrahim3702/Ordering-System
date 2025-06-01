@@ -1,0 +1,75 @@
+@import "tailwindcss";
+.browse-items {
+    padding: var(--spacing-lg);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+}
+
+.browse-items h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* ItemCard.jsx */
+.item-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.item-card h3 {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.item-card p {
+    margin: 0.25rem 0;
+    color: var(--text-secondary);
+}
+
+.item-card .stock-low {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.item-card .stock-out {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.item-card button {
+    margin-top: var(--spacing-sm);
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.item-card button:hover {
+    background-color: var(--primary-dark);
+}
+
+.item-card button:disabled {
+    background-color: var(--text-disabled);
+    cursor: not-allowed;
+}
